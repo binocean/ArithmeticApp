@@ -13,7 +13,7 @@ function createWindow() {
     }
   })
   // 打开开发者工具
-  win.webContents.openDevTools(); 
+  // win.webContents.openDevTools(); 
   // 加载index.html
   win.loadFile('index.html')
 }
