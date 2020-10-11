@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>四则运算表达式生成器</title>
+    <link rel="stylesheet" href="./renderer/index.css">
+  </head>
+  <body>
+    <section class="feat-module">
+      <h1>生成题目</h1>
+      <section class="items-container">
+        <div class="item">
+          <span class="mylabel">请输入生成题目个数：</span>
+          <input type="text" class="input" id="question-total" placeholder="请输入数字">
+        </div>
+        <div class="item">
+          <span class="mylabel">请输入数值的范围：</span>
+          <input type="text" class="input" id="range" placeholder="请输入数字">
+        </div>
+      </section>
+      <div class="btn" id="generate">生&nbsp;成</div>
+    </section>
+    <section class="feat-module">
+      <h1>校对答案功能</h1>
+      <section class="items-container">
+        <div class="item">
+          <span class="mylabel">题目文件：</span>
+          <div class="btn upload-btn" id="question-upload">上&nbsp;传</div>
+          <div class="file-path" id="quesiton-file-path"></div>
+        </div>
+        <div class="item">
+          <span class="mylabel">答案文件：</span>
+          <div class="btn upload-btn" id="answer-upload">上&nbsp;传</div>
+          <div class="file-path" id="answer-file-path"></div>
+        </div>
+      </section>
+      <div class="btn" id="proofread">校&nbsp;对</div>
+    </section>
+    <script type="module" src="./renderer/index.mjs"></script>
+  </body>
+</html>
