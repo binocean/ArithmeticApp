@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "expression-generator",
+  "name": "ArithmeticApp",
   "version": "1.0.0",
   "description": "A arithmetic expression generators",
   "main": "main.js",
