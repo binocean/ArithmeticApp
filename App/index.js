@@ -1,10 +1,13 @@
 const $ = require('jquery')
-const {
-  dialog
-} = require('electron').remote;
+const { dialog } = require('electron').remote;
+
+import { test } from "../module/creatQuestion.js";
+export let rangeObj = { // 参数最大值
+  range: 10
+};
 
 let $questionNumber = $('#questions-number'); // 题目总数input
-let $range = $('#range'); // 题目范围input
+let $range = $('#range'); // 题目最大值input
 let $creatBtn = $('#creat'); // 点击生成的按钮
 
 let $questionUpload = $('#question-upload'); // 题目文件上传按钮
@@ -15,6 +18,7 @@ let $collateBtn = $('#collate'); // 点击校对答案的按钮
 // 生成题目按钮的点击
 $creatBtn.on('click', function() {
   if (/^\d+$/.test($questionNumber.val()) && /^\d+$/.test($range.val())) {
+    test()
     dialog.showMessageBox({
       type: 'info',
       title: '生成完毕',
