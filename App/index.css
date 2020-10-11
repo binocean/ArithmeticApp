@@ -1,23 +1,32 @@
+.container{
+  height: 560px;
+  width: 460px;
+}
+h1{
+  text-align: center;
+}
 .views {
   padding: 20px;
 }
-
-.views .items-container .item {
+.item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   font-size: 1.2rem;
   color: #333;
-  font-weight: lighter;
   margin-bottom: 20px;
 }
-.views .items-container .item .file-path {
-  padding: 8px 0px 0 0;
-  font-size: 1rem;
-  width: 100%;
-  color: #a0a0a0;
+.center-item{
+  justify-content: center;
 }
-.views .items-container .input {
+.file-path {
+  padding-top: 8px;
+  font-size: 0.8rem;
+  width: 100%;
+  color: #888888;
+  text-align: center;
+}
+.input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -41,37 +50,44 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.views .items-container .input::placeholder {
-  color: #d3d3d3;
+.input::placeholder {
+  color: #999999;
 }
-.views .items-container .input:hover {
-  border-color: #40a9ff;
-  border-right-width: 1px!important;
-}
-.views .items-container .input:focus {
-  border-color: #40a9ff;
-  border-right-width: 1px!important;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
-  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
-}
-.views .btn {
-  width: 80px;
+
+.btn {
+  width: 120px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 31px;
-  font-size: 1rem;
-  border-radius: 3px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
   border: 1px solid #666;
-  color: rgba(0, 0, 0, 0.65);
+  color: #333333;
   background-color: #fff;
-  border-color: #d9d9d9;
   cursor: pointer;
   transition: all 0.3s;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.views .btn:hover {
-  color: #40a9ff;
-  background-color: #fff;
-  border-color: #40a9ff;
+
+.btn:active{
+  position: relative;
+  top: 1px;
+  opacity: 0.8;
+}
+
+.upload-btn{
+  font-size: 0.9rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 0.5px solid #444444;
+  cursor: pointer;
+}
+.upload-btn:active{
+  position: relative;
+  top: 1px;
+  opacity: 0.8;
 }

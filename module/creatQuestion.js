@@ -5,7 +5,7 @@ import { insertBrackets } from './bracket.js' // 与括号相关的方法
 import { writeFile } from './aboutFile.js'  // 与文件相关的方法
 import { calculateExp } from './calculate.js' // 与计算相关的方法
 
-export let creatQuestion = (total = 10, range = 5) => {
+export let creatQuestion = (total, range) => {
   let questionArr = []; // 题目数组
   let canBeZero = true; // 操作数是否可以为0 
   // 生成 total 个题目
@@ -40,10 +40,10 @@ export let creatQuestion = (total = 10, range = 5) => {
 
   // 给数组中每一条表达式插入括号
   console.time('处理题目总时间');
-  // 插入括号总时间
+  // 插入括号
   let insertBracketsArr = insertBrackets(questionArr);
 
-  // 转为文件字符串时间
+  // 转为文件字符串
   let strQuestionsArr = questionsToStr(insertBracketsArr);
   
   // 转为写入文件格式的答案数组
