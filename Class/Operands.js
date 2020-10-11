@@ -1,4 +1,4 @@
-import { randomNum } from '../commom/utils.js';
+import { randomNum } from '../common/utils.js';
 import { rangeObj } from '../App/index.js'
 
 const gcd = (num1, num2) => {

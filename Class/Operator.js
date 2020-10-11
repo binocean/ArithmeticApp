@@ -1,4 +1,4 @@
-import { randomNum } from '../commom/utils.js';
+import { randomNum } from '../common/utils.js';
 
 // 运算符类
 export default class Operator {

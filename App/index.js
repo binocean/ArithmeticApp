@@ -1,7 +1,7 @@
 const $ = require('jquery')
 const { dialog } = require('electron').remote;
 
-import { test } from "../module/creatQuestion.js";
+import { creatQuestion } from "../module/creatQuestion.js";
 export let rangeObj = { // 参数最大值
   range: 10
 };
@@ -18,7 +18,7 @@ let $collateBtn = $('#collate'); // 点击校对答案的按钮
 // 生成题目按钮的点击
 $creatBtn.on('click', function() {
   if (/^\d+$/.test($questionNumber.val()) && /^\d+$/.test($range.val())) {
-    test()
+    creatQuestion(Number($questionNumber.val()), Number($range.val()));
     dialog.showMessageBox({
       type: 'info',
       title: '生成完毕',
